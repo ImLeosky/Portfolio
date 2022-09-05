@@ -1,8 +1,0 @@
-:root {
-    --main_font: 'Yanone Kaffeesatz', sans-serif;
-}
-
-body {
-    background-color: lightslategrey;
-    font-family: var(--main_font);
-}
