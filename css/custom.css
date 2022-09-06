@@ -2,7 +2,8 @@
     --main-font: 'Yanone Kaffeesatz', sans-serif;
     --dark-background: linear-gradient(326deg, rgba(236, 236, 236,0.04) 0%, rgba(236, 236, 236,0.04) 6%,rgba(157, 157, 157,0.04) 6%, rgba(157, 157, 157,0.04) 29%,rgba(77, 77, 77,0.04) 29%, rgba(77, 77, 77,0.04) 100%),linear-gradient(164deg, rgba(236, 236, 236,0.04) 0%, rgba(236, 236, 236,0.04) 36%,rgba(157, 157, 157,0.04) 36%, rgba(157, 157, 157,0.04) 61%,rgba(77, 77, 77,0.04) 61%, rgba(77, 77, 77,0.04) 100%),linear-gradient(336deg, rgba(236, 236, 236,0.04) 0%, rgba(236, 236, 236,0.04) 64%,rgba(157, 157, 157,0.04) 64%, rgba(157, 157, 157,0.04) 69%,rgba(77, 77, 77,0.04) 69%, rgba(77, 77, 77,0.04) 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
     --light-background: linear-gradient(326deg, rgba(236, 236, 236,0.04) 0%, rgba(236, 236, 236,0.04) 6%,rgba(157, 157, 157,0.04) 6%, rgba(157, 157, 157,0.04) 29%,rgba(77, 77, 77,0.04) 29%, rgba(77, 77, 77,0.04) 100%),linear-gradient(164deg, rgba(236, 236, 236,0.04) 0%, rgba(236, 236, 236,0.04) 36%,rgba(157, 157, 157,0.04) 36%, rgba(157, 157, 157,0.04) 61%,rgba(77, 77, 77,0.04) 61%, rgba(77, 77, 77,0.04) 100%),linear-gradient(336deg, rgba(236, 236, 236,0.04) 0%, rgba(236, 236, 236,0.04) 64%,rgba(157, 157, 157,0.04) 64%, rgba(157, 157, 157,0.04) 69%,rgba(77, 77, 77,0.04) 69%, rgba(77, 77, 77,0.04) 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
-    --white-font: 'white';
+    --white-font: #d9c7c7;
+    --black-font: #3b3737;
 }
 
 html {
@@ -15,6 +16,13 @@ html {
 body {
     font-family: var(--main-font);
     background-image: var(--dark-background);
+    color: var(--white-font);
+}
+
+.light-theme {
+    background-image: var(--light-background);
+    color: var(--black-font);
+
 }
 
 #dev-container {
@@ -30,8 +38,49 @@ h1 {
 
 #theme-container {
     left: 0px;
+    display: flex;
+    vertical-align: middle;
 }
 
-#theme-switch:checked {
-    
+#theme-switch {
+    width: 2.5%;
+    background-color: var(--white-font);
 }
+
+#theme-switch-light {
+    width: 2.5%;
+    background-color: var(--black-font);
+}
+
+#theme-text {
+    padding-left: 10px;
+}
+
+.hidden {
+    opacity:0;
+  }
+
+.console-container {
+   
+    font-family: var(--main-font);
+    font-size:2em;
+    text-align:center;
+    height:20vh;
+    width:70vw;
+    display:block;
+    position:absolute;
+    color:white;
+    top: 240px;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+.console-underscore {
+    display:inline-block;
+    position:relative;
+    top: -0.1em;
+    left:-5px;
+}
+
